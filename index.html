@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header" id="header">    
+      <img src="https://www.svgrepo.com/show/765/library.svg" width="50px" height="50px" alt="library">
+      <h1>LIBRARY</h1>
+    </div>
+    <div class="book-container" id="book-container">
+    </div>
+    <button id="addButton">Add Book</button>
+  </div>
+
+  <div id="dialog" class="dialog">
+    <div class="dialog-content">
+        <span class="close" id="closeDialog">&times;</span>
+        <div>
+            <h2>Add a New Book</h2>
+            <form id="bookForm">
+            <input type="text" id="title" placeholder="  Title" required>
+            <input type="text" id="author" placeholder="  Author" required>
+            <input type="number" id="pages" placeholder="  Pages" required>
+        </div>
+        <div class="cbox">
+            <label for="isRead">Read this book?</label>
+            <input type="checkbox" id="isRead">
+        </div>
+        <div class="bookFormBtn">
+            <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="successDialog" class="dialog">
+    <div class="dialog-content">
+      <span class="close" id="closeSuccessDialog">&times;</span>
+      <h2>Success!</h2>
+      <p>Book added successfully!</p>
+      <button id="closeSuccessButton">Close</button>
+    </div>
+  </div>
+
+  <div id="removeDialog" class="dialog">
+    <div class="dialog-content">
+        <span class="close" id="closeRemoveDialog">&times;</span>
+      <h2>Remove Book</h2>
+      <p>Are you sure you want to remove this book?</p>
+      <div class="button-container">
+        <button id="confirmRemoveButton">Yes</button>
+        <button id="cancelRemoveButton">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border-radius: 5px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+#header {
+  grid-area: 1 / 1 / 1 / 6;
+  background-color: #3F51B5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-bottom: 5px outset #000;
+  gap: 15px;
+  position: relative;
+}
+
+#header h1 {
+  margin: 0;
+  color: white;
+}
+
+#header img {
+  position: absolute;
+  top: 10;
+  left: 20px;
+}
+
+#book-container {
+  grid-area: 2 / 2 / 3 / 5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.book-card {
+  border: 5px outset black;
+  padding: 15px;
+  background-color: #C5CAE9;
+  border-radius: 10px;
+}
+
+#addButton {
+  height: 70px;
+  width: 150px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border: 5px outset black;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 15px;
+}
+
+#addButton:hover {
+  background-color: #388E3C;
+  border: 5px inset black;
+}
+
+.dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #C5CAE9;
+  padding: 25px;
+  border: 5px inset #1A237E;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  text-align: center;
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#bookForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bookFormBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookFormBtn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-content input,
+.dialog-content button {
+  margin: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+.dialog-content button {
+  height: 50px;
+  width: 150px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border: 5px outset #000;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 5px;
+}
+
+.dialog-content button:hover {
+  background-color: #388E3C;
+  border: 5px inset #000;
+}
+
+.close {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 40px;
+  color: red;
+}
+
+.close:hover {
+  color: #555;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.remove-book,
+#confirmRemoveButton {
+  background-color: #F44336;
+  color: white;
+  cursor: pointer;
+  border: 5px outset #000;
+  padding: 0 7px;
+  border-radius: 5px;
+}
+
+.remove-book:hover,
+#confirmRemoveButton:hover {
+  background-color: #D32F2F;
+  border: 5px inset #000;
+}
+
+.toggle-read,
+#cancelRemoveButton {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border: 5px outset #000;
+  border-radius: 5px;
+}
+
+.toggle-read:hover,
+#cancelRemoveButton:hover {
+  background-color: #388E3C;
+  color: white;
+  cursor: pointer;
+  border: 5px inset #000;
+}
+
+#confirmRemoveButton {
+  background-color: #F44336;
+  color: white;
+  cursor: pointer;
+  border: 5px outset #000;
+  border-radius: 5px;
+}
+
+#removeConfirmDialog,
+#successDialog {
+  border-radius: 20px;
+  padding: 25px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: rgb(71, 71, 71);
+}
+
+label {
+  color: rgb(71, 71, 71);
+  font-weight: bold;
+}
+
+input {
+  background-color: whitesmoke;
+}
+
+.cbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 3px solid #1A237E;
+}
